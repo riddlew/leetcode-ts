@@ -1,3 +1,3 @@
 export function noSpace(x:string):string {
-  return x.replace(" ", "");
+  return x.replace(/\s/g, "");
 }
