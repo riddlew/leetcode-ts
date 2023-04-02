@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test": "mocha \"[0-9]kyu/**/*.test.ts\" --recursive --loader=ts-node/register --extension ts",
+    "test:watch": "mocha \"[0-9]kyu/**/*.test.ts\" --recursive --loader=ts-node/register --extension ts --watch",
+    "test:target": "mocha \"$1/*.test.ts\" --recursive --loader=ts-node/register --extension ts",
+    "test:target:watch": "mocha \"$1/*.test.ts\" --recursive --loader=ts-node/register --extension ts --watch"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,12 @@
   },
   "homepage": "https://github.com/riddlew/codewars#readme",
   "devDependencies": {
-    "@types/jest": "^27.5.1",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.15.11",
     "chai": "^4.3.6",
-    "jest": "^28.1.0",
-    "ts-jest": "^28.0.3",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.2"
   }
 }

@@ -1,9 +1,12 @@
 import { boolToWord } from "./solution";
+import { expect } from "chai";
 
-test('true returns "Yes"', () => {
-  expect(boolToWord(true)).toEqual("Yes");
-});
+describe("Boolean to string", () => {
+  it('true returns "Yes"', () => {
+    expect(boolToWord(true)).to.equal("Yes");
+  });
 
-test('false returns "No"', () => {
-  expect(boolToWord(false)).toEqual("No");
+  it('false returns "No"', () => {
+    expect(boolToWord(false)).to.equal("No");
+  });
 });
